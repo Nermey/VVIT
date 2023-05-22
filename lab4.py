@@ -9,7 +9,7 @@ cursor = conn.cursor()
 
 @app.route('/login/', methods=['GET'])
 def index():
-    return render_template('login.html')
+    return render_template('login4.html')
 
 
 @app.route('/login/', methods=['POST'])
@@ -21,4 +21,4 @@ def login():
     record = list(cursor.fetchall())
     if len(record) != 0:
         return render_template('account.html', full_name=record[0][1], login=record[0][2], password=record[0][3])
-    return render_template('login.html', flag=len(record))
+    return render_template('login4.html', flag=len(record))

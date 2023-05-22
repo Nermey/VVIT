@@ -1,12 +1,11 @@
 import requests
-import math
 city = 'Moscow'
 api = 'e804431e5f7d30136c5605c822b91c5e'
 
 
 def daily(city):
     res = requests.get(f'http://api.openweathermap.org/data/2.5/weather',
-                       params={'q': city, 'units':'metric', 'lang':'ru', 'APPID': api})
+                       params={'q': city, 'units': 'metric', 'lang': 'ru', 'APPID': api})
     data = res.json()
 
     print("Город:", data['name'])
@@ -29,4 +28,4 @@ def week(city):
               "> \r\nПогодные условия <", i['weather'][0]['description'], "> \r\nСкорость ветра <", round(i['wind']['speed']), "> \r\n Видимость <", i['visibility'], '>')
         print("____________________________")
 
-week(city)
+daily(city)
