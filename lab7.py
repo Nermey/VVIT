@@ -6,7 +6,7 @@ import psycopg2
 bot = telebot.TeleBot(token)
 conn = psycopg2.connect(database='timetable_mtuci',
                         user='postgres',
-                        password='Awe6ve2056E',
+                        password='',
                         host='localhost',
                         port='5432')
 cursor = conn.cursor()
