@@ -1,6 +1,6 @@
 import requests
 city = 'Moscow'
-api = 'e804431e5f7d30136c5605c822b91c5e'
+api = ''
 
 
 def daily(city):
